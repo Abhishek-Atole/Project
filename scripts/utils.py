@@ -2,34 +2,17 @@ import cv2
 import pytesseract
 import requests
 import os
+from image_preprocessor import preprocess_image
 
-def preprocess_image(image_path):
+def extract_text_from_image(image_path, processed_path):
     """
-    Preprocess an image for better OCR accuracy.
-    - Convert to grayscale.
-    - Apply thresholding.
-    - Remove noise.
+    Extract text from an image using Tesseract OCR after preprocessing.
     """
-    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-    if image is None:
-        raise FileNotFoundError(f"Image not found: {image_path}")
+    # Preprocess the image
+    preprocess_image(image_path, processed_path)
 
-    # Apply thresholding
-    _, processed_image = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY)
-
-    # Optional: Apply GaussianBlur to reduce noise
-    processed_image = cv2.GaussianBlur(processed_image, (5, 5), 0)
-
-    return processed_image
-
-def extract_text_from_image(image_path):
-    """
-    Extract text from an image using Tesseract OCR.
-    """
-    image = cv2.imread(image_path)
-    if image is None:
-        raise FileNotFoundError(f"Image not found: {image_path}")
-    text = pytesseract.image_to_string(image)
+    # Perform OCR on the preprocessed image
+    text = pytesseract.image_to_string(processed_path)
     return text
 
 def extract_equation_with_mathpix(image_path, app_id, app_key):
