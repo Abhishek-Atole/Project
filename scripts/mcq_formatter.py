@@ -4,17 +4,36 @@ def format_mcq_data(raw_data):
     """
     formatted_data = {"questions": []}
 
-    for i, question_text in enumerate(raw_data["questions"]):
-        # Example logic to split question and choices
-        parts = question_text.split("\n")
-        question = parts[0]  # First line is the question
-        choices = parts[1:]  # Remaining lines are choices
+    question = None
+    choices = []
 
-        # Add question, choices, and associated images
+    for line in raw_data["questions"]:
+        line = line.strip()
+        if not line:
+            continue
+
+        # Detect a new question
+        if line.endswith("?") or line.startswith("Solve"):
+            # Save the previous question and its choices
+            if question:
+                formatted_data["questions"].append({
+                    "question": question,
+                    "choices": choices,
+                    "images": []
+                })
+            # Start a new question
+            question = line
+            choices = []
+        else:
+            # Add to choices
+            choices.append(line)
+
+    # Add the last question
+    if question:
         formatted_data["questions"].append({
             "question": question,
             "choices": choices,
-            "images": raw_data["images"][i:i+1] if i < len(raw_data["images"]) else []
+            "images": []
         })
 
     return formatted_data
