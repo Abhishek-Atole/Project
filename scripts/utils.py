@@ -2,17 +2,18 @@ import cv2
 import pytesseract
 import requests
 import os
+import time
 from image_preprocessor import preprocess_image
 
-def extract_text_from_image(image_path, processed_path):
+def extract_text_from_image(image_path):
     """
     Extract text from an image using Tesseract OCR after preprocessing.
     """
     # Preprocess the image
-    preprocess_image(image_path, processed_path)
+    processed_image = preprocess_image(image_path)
 
     # Perform OCR on the preprocessed image
-    text = pytesseract.image_to_string(processed_path)
+    text = pytesseract.image_to_string(processed_image)
     return text
 
 def extract_equation_with_mathpix(image_path, app_id, app_key):
@@ -40,3 +41,10 @@ def extract_equation_with_mathpix(image_path, app_id, app_key):
     else:
         print(f"MathPix API Error: {response.status_code}")
         return ""
+
+# Measure preprocessing time for a sample image
+start_time = time.time()
+result = preprocess_image("../input_files/sample_image.png")
+end_time = time.time()
+
+print("Processing time:", end_time - start_time, "seconds")

@@ -16,6 +16,10 @@ class TestTxtParser(unittest.TestCase):
         # Parse the file
         result = parse_txt("sample.txt")
 
+        # Print processed image data (sample)
+        print("Processed image data (sample):")
+        print(result[:5, :5])  # Print the top-left 5x5 portion of the array
+
         # Expected output
         expected = {
             "questions": [
