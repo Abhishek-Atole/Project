@@ -1,4 +1,5 @@
 import os
+import sys
 import logging
 import json
 import argparse
@@ -12,9 +13,22 @@ from image_preprocessor import preprocess_image
 import pytesseract
 import time
 import image_preprocessor
+from word_parser import parse_word
+
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+
+# Ensure the logs directory exists
+os.makedirs("logs", exist_ok=True)
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("logs/application.log"),  # Log to a file
+        logging.StreamHandler()  # Log to the console
+    ]
+)
 
 def process_file(file_name, input_dir, output_dir):
     input_path = os.path.join(input_dir, file_name)

@@ -1,0 +1,28 @@
+2025-03-31 20:01:13,509 - INFO - Processing Word file: sample.docx
+2025-03-31 20:01:13,513 - INFO - Formatted MCQ Data: {'questions': [{'question': 'What is 2 + 2?', 'choices': ['A. 3', 'B. 4', 'C. 5', 'D. 6'], 'images': []}]}
+2025-03-31 20:01:13,530 - INFO - Generated PPT: ../output_files/sample.pptx
+2025-03-31 20:01:13,578 - INFO - Generated LaTeX: ../output_files/sample.pdf
+2025-03-31 20:01:13,578 - INFO - Processing PDF file: sample.pdf
+2025-03-31 20:01:13,580 - INFO - Formatted MCQ Data: {'questions': [{'question': 'What is 2 + 2?', 'choices': ['A. 3', 'B. 4', 'C. 5', 'D. 6'], 'images': []}, {'question': 'Solve the equation: x^2 - 4 = 0', 'choices': ['A. x = 2', 'B. x = -2', 'C. x = ±2', 'D. None'], 'images': []}]}
+2025-03-31 20:01:13,598 - INFO - Generated PPT: ../output_files/sample.pptx
+2025-03-31 20:01:13,653 - INFO - Generated LaTeX: ../output_files/sample.pdf
+2025-03-31 20:01:13,653 - INFO - Processing Image file: sample_image.png
+2025-03-31 20:01:13,665 - DEBUG - ['tesseract', '/tmp/tess_m5weabda_input.PNG', '/tmp/tess_m5weabda', 'txt']
+2025-03-31 20:01:13,758 - INFO - Extracted text saved to: ../output_files/sample_image.txt
+2025-03-31 20:01:13,758 - INFO - Processing Image file: equation_image.png
+2025-03-31 20:01:13,765 - DEBUG - ['tesseract', '/tmp/tess_5jc104jr_input.PNG', '/tmp/tess_5jc104jr', 'txt']
+2025-03-31 20:01:13,939 - INFO - Extracted text saved to: ../output_files/equation_image.txt
+2025-03-31 20:02:08,692 - INFO - Processing Word file: sample.docx
+2025-03-31 20:02:08,695 - INFO - Formatted MCQ Data: {'questions': [{'question': 'What is 2 + 2?', 'choices': ['A. 3', 'B. 4', 'C. 5', 'D. 6'], 'images': []}]}
+2025-03-31 20:02:08,712 - INFO - Generated PPT: ../output_files/sample.pptx
+2025-03-31 20:02:08,759 - INFO - Generated LaTeX: ../output_files/sample.pdf
+2025-03-31 20:02:08,759 - INFO - Processing PDF file: sample.pdf
+2025-03-31 20:02:08,760 - INFO - Formatted MCQ Data: {'questions': [{'question': 'What is 2 + 2?', 'choices': ['A. 3', 'B. 4', 'C. 5', 'D. 6'], 'images': []}, {'question': 'Solve the equation: x^2 - 4 = 0', 'choices': ['A. x = 2', 'B. x = -2', 'C. x = ±2', 'D. None'], 'images': []}]}
+2025-03-31 20:02:08,783 - INFO - Generated PPT: ../output_files/sample.pptx
+2025-03-31 20:02:08,836 - INFO - Generated LaTeX: ../output_files/sample.pdf
+2025-03-31 20:02:08,836 - INFO - Processing Image file: sample_image.png
+2025-03-31 20:02:08,846 - DEBUG - ['tesseract', '/tmp/tess_zqc_2fai_input.PNG', '/tmp/tess_zqc_2fai', 'txt']
+2025-03-31 20:02:08,935 - INFO - Extracted text saved to: ../output_files/sample_image.txt
+2025-03-31 20:02:08,935 - INFO - Processing Image file: equation_image.png
+2025-03-31 20:02:08,942 - DEBUG - ['tesseract', '/tmp/tess_sfxwvppz_input.PNG', '/tmp/tess_sfxwvppz', 'txt']
+2025-03-31 20:02:09,104 - INFO - Extracted text saved to: ../output_files/equation_image.txt
