@@ -1,0 +1,8 @@
+# Python dependencies
+python-docx
+PyPDF2
+pytesseract
+opencv-python
+matplotlib
+python-pptx
+fpdf
