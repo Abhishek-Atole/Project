@@ -6,3 +6,12 @@ opencv-python
 matplotlib
 python-pptx
 fpdf
+pylatex
+pdfLaTex
+pylatex
+python-docx
+PyPDF2
+python-pptx
+opencv-python
+pytesseract
+lxml

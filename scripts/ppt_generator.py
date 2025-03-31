@@ -4,6 +4,7 @@ def generate_ppt(mcq_data, output_path):
     """
     Generate a PowerPoint presentation from MCQ data.
     """
+    print(f"Generating PowerPoint at: {output_path}")  # Debugging statement
     prs = Presentation()
 
     for question_data in mcq_data["questions"]:
@@ -20,5 +21,6 @@ def generate_ppt(mcq_data, output_path):
         for image_path in question_data["images"]:
             slide.shapes.add_picture(image_path, left=100, top=200, width=300, height=200)
 
+    # Save the PowerPoint file
     prs.save(output_path)
-    print(f"PowerPoint presentation saved at: {output_path}")
+    print(f"PowerPoint saved successfully at: {output_path}")  # Debugging statement
