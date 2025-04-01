@@ -40,3 +40,17 @@
 2025-03-31 20:03:35,561 - INFO - Processing Image file: equation_image.png
 2025-03-31 20:03:35,567 - DEBUG - ['tesseract', '/tmp/tess_lkl3iar4_input.PNG', '/tmp/tess_lkl3iar4', 'txt']
 2025-03-31 20:03:35,751 - INFO - Extracted text saved to: ../output_files/equation_image.txt
+2025-04-01 01:48:15,976 - INFO - Processing Word file: sample.docx
+2025-04-01 01:48:15,983 - INFO - Formatted MCQ Data: {'questions': [{'question': 'What is 2 + 2?', 'choices': ['A. 3', 'B. 4', 'C. 5', 'D. 6'], 'images': []}]}
+2025-04-01 01:48:16,018 - INFO - Generated PPT: ../output_files/sample.pptx
+2025-04-01 01:48:16,900 - INFO - Generated LaTeX: ../output_files/sample.pdf
+2025-04-01 01:48:16,900 - INFO - Processing PDF file: sample.pdf
+2025-04-01 01:48:16,903 - INFO - Formatted MCQ Data: {'questions': [{'question': 'What is 2 + 2?', 'choices': ['A. 3', 'B. 4', 'C. 5', 'D. 6'], 'images': []}, {'question': 'Solve the equation: x^2 - 4 = 0', 'choices': ['A. x = 2', 'B. x = -2', 'C. x = ±2', 'D. None'], 'images': []}]}
+2025-04-01 01:48:16,931 - INFO - Generated PPT: ../output_files/sample.pptx
+2025-04-01 01:48:17,046 - INFO - Generated LaTeX: ../output_files/sample.pdf
+2025-04-01 01:48:17,047 - INFO - Processing Image file: sample_image.png
+2025-04-01 01:48:17,157 - DEBUG - ['tesseract', '/tmp/tess_9ay0udf__input.PNG', '/tmp/tess_9ay0udf_', 'txt']
+2025-04-01 01:48:18,105 - INFO - Extracted text saved to: ../output_files/sample_image.txt
+2025-04-01 01:48:18,105 - INFO - Processing Image file: equation_image.png
+2025-04-01 01:48:18,150 - DEBUG - ['tesseract', '/tmp/tess_n68vq196_input.PNG', '/tmp/tess_n68vq196', 'txt']
+2025-04-01 01:48:18,402 - INFO - Extracted text saved to: ../output_files/equation_image.txt
